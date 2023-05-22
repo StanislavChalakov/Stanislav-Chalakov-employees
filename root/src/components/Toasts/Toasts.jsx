@@ -8,9 +8,7 @@ export default function Toasts() {
     <div className="toast z-50">
       {toasts.map((t, i) => (
         <div key={i} className={`alert ${t.class}`}>
-          <div>
-            <span>{t.message}</span>
-          </div>
+          <span>{t.message}</span>
         </div>
       ))}
     </div>
