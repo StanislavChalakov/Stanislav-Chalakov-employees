@@ -3,7 +3,8 @@ import CSVReader from 'react-csv-reader';
 import { ToastContext } from '../providers/toast-context';
 import { toastClass } from '../common/toast-class.enum';
 import InputData from '../components/InputData/InputData';
-import { csvFileColumn } from '../common/csv-file-column';
+import { csvFileColumn } from '../common/csv-file-column.enum';
+import OutputData from '../components/OutputData/OutputData';
 
 export default function Home() {
   const { addToast } = useContext(ToastContext);
@@ -34,6 +35,7 @@ export default function Home() {
     <>
       <h1>Employees</h1>
       <CSVReader ref={fileInputRef} onFileLoaded={loadFileDataHandler} parserOptions={{ header: true, skipEmptyLines: true }} accept=".csv, text/csv" cssInputClass="file-input file-input-secondary focus:outline-0 file-input-md w-full max-w-xs my-2 rounded hover:border-primary" />
+      <OutputData employees={employees} />
       <InputData employees={employees} />
     </>
   );

@@ -1,9 +1,9 @@
-import { csvFileColumn } from '../../common/csv-file-column';
+import { csvFileColumn } from '../../common/csv-file-column.enum';
 
 export default function InputData({ employees }) {
   return (
     <>
-      <p>Input data:</p>
+      <p className="mt-4">Input data:</p>
       <div className="overflow-x-auto w-full border border-secondary rounded">
         <table className="table table-zebra w-full text-center">
           <thead>
